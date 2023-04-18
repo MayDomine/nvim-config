@@ -30,7 +30,9 @@ maps.n["<C-s>"] = { "<cmd>w!<cr>", desc = "Force write" }
 maps.n["<C-q>"] = { "<cmd>q!<cr>", desc = "Force quit" }
 maps.n["|"] = { "<cmd>vsplit<cr>", desc = "Vertical Split" }
 maps.n["\\"] = { "<cmd>split<cr>", desc = "Horizontal Split" }
-
+maps.n[";"] = {"<End>"}
+maps.v["J"] = ":m '>+1<CR>gv=gv"
+maps.v["K"] = ":m '<-2<CR>gv=gv"
 -- Plugin Manager
 maps.n["<leader>p"] = sections.p
 maps.n["<leader>pi"] = { function() require("lazy").install() end, desc = "Plugins Install" }
@@ -172,6 +174,7 @@ if is_available "neo-tree.nvim" then
     end,
     desc = "Toggle Explorer Focus",
   }
+  maps.n["<leader>w"] = {"<cmd>cd %:p:h:h<cr>", desc="enter the dir"}
 end
 
 -- Session Manager
