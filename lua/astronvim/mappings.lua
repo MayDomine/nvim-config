@@ -174,7 +174,7 @@ if is_available "neo-tree.nvim" then
     end,
     desc = "Toggle Explorer Focus",
   }
-  maps.n["<leader>w"] = {"<cmd>cd %:p:h:h<cr>", desc="enter the dir"}
+  maps.n["<leader>cw"] = {"<cmd>cd %:p:h:h<cr>", desc="enter the dir"}
 end
 
 -- Session Manager
